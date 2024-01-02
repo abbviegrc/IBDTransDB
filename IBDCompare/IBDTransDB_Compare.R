@@ -428,10 +428,10 @@ server <- function(input, output, session) {
         output$gene_input_selection <- renderUI({
           div(
             selectInput(inputId = "pathway_database_input",
-                        label = "Select a pathway database",
+                        label = "Select one or multiple pathway databases",
                         choices = pathways,
                         selected = NULL,
-                        multiple = FALSE,
+                        multiple = TRUE,
                         width = "auto"),
             selectInput(inputId = "pathway_list_input",
                         label = "Select one or multiple pathways",
